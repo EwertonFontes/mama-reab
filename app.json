@@ -1,0 +1,15 @@
+{
+  "expo": {
+    "sdkVersion": "27.0.0",
+    "name": "V3 - EVM Pós Cancer de Mama",
+    "version": "1.0.0",
+    "slug": "evm-pcm-v3",
+    "ios": {
+      "bundleIdentifier": "com.ewertonfontes.appvideo"
+    },
+    "android": {
+      "package": "com.ewertonfontes.appvideo"
+    },
+    "description": ""
+  }
+}
