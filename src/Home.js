@@ -1,26 +1,14 @@
 import React from 'react'
-import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import styled from 'styled-components'
 import { Actions } from 'react-native-router-flux'
 
 import BackgroundImage from './../components/BackgroundImage'
 
-const Container = styled.View`
-  flex: 1;
-  backgroundColor: #FFF;
-  align-items: center;
-`
-
 const Footer = styled.Text`
   color: #FFF;
   font-size: 15;
   margin-top: 100;
-`
-
-const Logo = styled.Image`
-  width: 300;
-  height: 150; 
-  margin-top: 70;
 `
 
 const ButtonGroup = styled.View`
@@ -36,9 +24,8 @@ export default class Home extends React.Component {
   render() {
     return (
       <BackgroundImage>  
-        {/*<Logo source={require('./logo.png')} />*/}
         <ButtonGroup>
-          <TouchableOpacity style={styles.btnSobre} onPress={() => Actions.treatment()} >
+          <TouchableOpacity style={styles.btnSobre} onPress={() => Actions.treatementType({title: 'Cirurgico'})} >
             <TextBtn>Tratamento</TextBtn>
           </TouchableOpacity>
           <TouchableOpacity style={styles.btnSobre} onPress={() => Actions.about()} >

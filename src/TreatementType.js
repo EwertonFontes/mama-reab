@@ -1,11 +1,28 @@
-import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import React from 'react'
+import { StyleSheet, TouchableOpacity } from 'react-native'
 import { Actions } from 'react-native-router-flux'
 
-import BackgroundImage from './../components/BackgroundImage'
+import TreatmentsScreens from './../components/TreatmentsScreens'
 import ButtonTreatments from './../components/ButtonTreatments'
 
 export default class TreatmentType extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      treatment: [{
+        key: 0, name: 'Mastectomia Total', type: [
+          {key: 0, name: 'Com Esvaziamento Axiliar'},
+          {key: 1, name: 'Sem Esvaziamento Axiliar' }]
+        }, {
+        key: 1, name: 'Mastectomia Parcial', type: [
+          {key: 0, name: 'Com Esvaziamento Axiliar'},
+          {key: 1, name: 'Sem Esvaziamento Axiliar' }]
+        }
+      ]
+    }
+  }
+
+
   renderTreatment (treat) {
     return (  
       <TouchableOpacity  key={treat.key} style={styles.bottomItem}
@@ -16,28 +33,11 @@ export default class TreatmentType extends React.Component {
   }
   
   render() {
-    return (
-      <BackgroundImage>
-        <View>
-          <View style={styles.bottom}>
-            { this.props.treatment.map((treat) => this.renderTreatment(treat)) }
-          </View>
-        </View>
-      </BackgroundImage>
-    )
+    return <TreatmentsScreens>{ this.state.treatment.map((treat) => this.renderTreatment(treat)) }</TreatmentsScreens>
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-   bottom: {
-     height: '90%',
-     flexDirection: 'row',
-     flexWrap: 'wrap',
-     padding: 5,
-   },
    bottomItem: {
     width: '50%',
     height: '50%',

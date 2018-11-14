@@ -1,9 +1,9 @@
-import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import React from 'react'
+import { StyleSheet, TouchableOpacity } from 'react-native'
 import { Actions } from 'react-native-router-flux'
 
 import ButtonTreatments from './../components/ButtonTreatments'
-import BackgroundImage from './../components/BackgroundImage'
+import TreatmentsScreens from './../components/TreatmentsScreens'
 
 export default class CirurgicTreatment extends React.Component {
   constructor(props) {
@@ -342,7 +342,6 @@ export default class CirurgicTreatment extends React.Component {
     }
   }
 
-  //onPress={() => Actions.listVideo({exercicios: treatType.exercicio })}
   renderTreatment (treatType) {
     return (  
       <TouchableOpacity key={treatType.key} style={styles.bottomItem} 
@@ -354,28 +353,11 @@ export default class CirurgicTreatment extends React.Component {
   }
   
   render() { 
-    return (
-      <BackgroundImage>
-        <View stles={styles.container}>
-          <View style={styles.bottom}>
-            { this.props.treatmentType.map((treatType) => this.renderTreatment(treatType)) }
-          </View>
-        </View>
-      </BackgroundImage>
-    )
+    return <TreatmentsScreens>{ this.props.treatmentType.map((treatType) => this.renderTreatment(treatType)) }</TreatmentsScreens>
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-   bottom: {
-     height: '90%',
-     flexDirection: 'row',
-     flexWrap: 'wrap',
-     padding: 5,
-   },
    bottomItem: {
     width: '50%',
     height: '50%',

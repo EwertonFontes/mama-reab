@@ -1,7 +1,8 @@
 import React from 'react'
-import { StyleSheet, Text, View, ScrollView, Button, TouchableOpacity, Image, Dimensions } from 'react-native'
+import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Dimensions } from 'react-native'
 import { Video, ScreenOrientation } from 'expo'
 import VideoPlayer from '@expo/videoplayer'
+
 import PlaylistVideo from './../components/Playlist'
 
 const Thumbnail = { uri: "http://i.imgur.com/HKVgAl0.jpg" }

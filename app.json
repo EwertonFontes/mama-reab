@@ -1,14 +1,14 @@
 {
   "expo": {
     "sdkVersion": "27.0.0",
-    "name": "V3 - EVM Pós Cancer de Mama",
+    "name": "Mama Reab",
     "version": "1.0.0",
-    "slug": "evm-pcm-v3",
+    "slug": "mama-reab-v1",
     "ios": {
       "bundleIdentifier": "com.ewertonfontes.appvideo"
     },
     "android": {
-      "package": "com.ewertonfontes.appvideo"
+      "package": "com.ewertonfontes.mamareab"
     },
     "description": ""
   }

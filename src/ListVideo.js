@@ -1,9 +1,8 @@
 import React from 'react'
-import { StyleSheet, Text, View, ScrollView, Button, TouchableOpacity, Image } from 'react-native'
-import { Video } from 'expo'
-import VideoPlayer from '@expo/videoplayer'
-import PlaylistVideo from './../components/Playlist'
+import { StyleSheet, View, ScrollView, TouchableOpacity } from 'react-native'
 import { Actions } from 'react-native-router-flux'
+
+import PlaylistVideo from './../components/Playlist'
 
 const Thumbnail = { uri: "http://i.imgur.com/HKVgAl0.jpg" }
 
@@ -11,7 +10,7 @@ export default class ListVideo extends React.Component {
   
   renderPlaylist (exercicio) {
     return (
-      <TouchableOpacity key={exercicio.key} style={styles.bottomItem} onPress={() => Actions.video({title: this.props.title + ' - ' + exercicio.name, exercicios: this.props.exercicios })} >  
+      <TouchableOpacity key={exercicio.key} onPress={() => Actions.video({title: this.props.title + ' - ' + exercicio.name, exercicios: this.props.exercicios })} >  
         <PlaylistVideo image={Thumbnail} name={exercicio.name} />
       </TouchableOpacity>
     )
@@ -19,11 +18,9 @@ export default class ListVideo extends React.Component {
 
   render() {
     return (
-        <ScrollView style={styles.container} >
-          <View>
-            { this.props.exercicios.map((exercicio) => this.renderPlaylist(exercicio)) }
-          </View> 
-        </ScrollView>
+      <ScrollView style={styles.container} >
+        <View>{ this.props.exercicios.map((exercicio) => this.renderPlaylist(exercicio)) }</View> 
+      </ScrollView>
     )
   }
 }
@@ -33,18 +30,4 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#FFF' 
   },
-  top: {
-     height: '50%',
-     alignItems: 'center',
-     justifyContent: 'center',
-     backgroundColor: '#FFF',  
-  },
-  profileImage: {
-    width: 140,
-    height: 40,
-    borderRadius: 100,
-    borderWidth: 4,
-    borderColor: '#fff',
-    backgroundColor: '#eee',
-  }
 })
