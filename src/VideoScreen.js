@@ -2,9 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View, ScrollView, Button, TouchableOpacity, Image, Dimensions } from 'react-native'
 import { Video, ScreenOrientation } from 'expo'
 import VideoPlayer from '@expo/videoplayer'
-import PlaylistVideo from './Playlist'
-
-
+import PlaylistVideo from './../components/Playlist'
 
 const Thumbnail = { uri: "http://i.imgur.com/HKVgAl0.jpg" }
 
@@ -57,22 +55,22 @@ export default class VideoScreen extends React.Component {
   }
 
   render() {
-    return (       
-      <View style={styles.container} >
-        
-         <VideoPlayer
-            videoProps={{  shouldPlay: true,
-              resizeMode: Video.RESIZE_MODE_CONTAIN,
-              source: { uri: 'https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8' },
-              isMuted: false}}
-            isPortrait={this.state.isPortrait}
-            playFromPositionMillis={0}
-            switchToLandscape={()=> this.switchModeLandscape()}
-            switchToPortrait={()=> this.switchModePortrait()}
-            style={{ height: this.state.height }}
-          />
-        { this.state.show ? this.renderShowPage() : <View /> }        
-      </View>
+    return (
+        <View style={styles.container} >
+          
+          <VideoPlayer
+              videoProps={{  shouldPlay: true,
+                resizeMode: Video.RESIZE_MODE_CONTAIN,
+                source: { uri: 'https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8' },
+                isMuted: false}}
+              isPortrait={this.state.isPortrait}
+              playFromPositionMillis={0}
+              switchToLandscape={()=> this.switchModeLandscape()}
+              switchToPortrait={()=> this.switchModePortrait()}
+              style={{ height: this.state.height }}
+            />
+          { this.state.show ? this.renderShowPage() : <View /> }        
+        </View>
     )
   }
 }

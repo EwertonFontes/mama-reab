@@ -1,9 +1,11 @@
-import React from 'react';
+import React from 'react'
+import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native'
 import styled from 'styled-components'
-import { StyleSheet, Text, View, Button, TouchableOpacity, Imag, ImageBackground } from 'react-native';
 import { Actions } from 'react-native-router-flux'
 
-const Container = styled.View` 
+import BackgroundImage from './../components/BackgroundImage'
+
+const Container = styled.View`
   flex: 1;
   backgroundColor: #FFF;
   align-items: center;
@@ -33,7 +35,7 @@ const TextBtn = styled.Text`
 export default class Home extends React.Component {
   render() {
     return (
-      <ImageBackground source={require('./images/bg.jpg')} imageStyle={{resizeMode: 'cover'}} style={styles.container} >  
+      <BackgroundImage>  
         {/*<Logo source={require('./logo.png')} />*/}
         <ButtonGroup>
           <TouchableOpacity style={styles.btnSobre} onPress={() => Actions.treatment()} >
@@ -44,17 +46,12 @@ export default class Home extends React.Component {
           </TouchableOpacity>
         </ButtonGroup>
         <Footer>Desenvolvido por Ewerton Fontes</Footer>
-      </ImageBackground>
+      </BackgroundImage>
     )
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
   btnSobre: {
      margin: 5,
      height: 45,

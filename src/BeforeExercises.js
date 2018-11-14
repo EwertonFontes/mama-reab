@@ -1,25 +1,28 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Actions } from 'react-native-router-flux'
+
+import BackgroundImage from './../components/BackgroundImage'
+import ButtonTreatments from './../components/ButtonTreatments'
 
 export default class BeforeExercises extends React.Component {
   renderTreatment (treatType) {
     return (  
       <TouchableOpacity key={treatType.key} style={styles.bottomItem} onPress={() => Actions.listVideo({exercicios: treatType.exercicio, title:treatType.name})}>
-        <View style={styles.bottomItemInner} >
-          <Text style={styles.text}>{treatType.name}</Text>  
-        </View>
+        <ButtonTreatments name={treatType.name} />
       </TouchableOpacity>
     )
   }
   
   render() { 
     return (
-      <View stles={styles.container}>
-        <View style={styles.bottom}>
-          { this.props.treat.map((treatType) => this.renderTreatment(treatType)) }
+      <BackgroundImage>
+        <View stles={styles.container}>
+          <View style={styles.bottom}>
+            { this.props.treat.map((treatType) => this.renderTreatment(treatType)) }
+          </View>
         </View>
-      </View>
+      </BackgroundImage>
     )
   }
 }
@@ -30,7 +33,6 @@ const styles = StyleSheet.create({
   },
    bottom: {
      height: '90%',
-     backgroundColor: '#FFF',
      flexDirection: 'row',
      flexWrap: 'wrap',
      padding: 5,
@@ -39,16 +41,5 @@ const styles = StyleSheet.create({
     width: '50%',
     height: '50%',
     padding: 5,
-   },
-   bottomItemInner: {
-    flex: 1,
-    backgroundColor: '#9E3256',
-    opacity: 1,
-   },
-   text: {
-     textAlign: 'center',
-     color: '#FFF',
-     fontWeight: 'bold',
-     fontSize: 20,
    }
 });

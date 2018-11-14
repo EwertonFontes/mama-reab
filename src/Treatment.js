@@ -1,6 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, TouchableOpacity, Image, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Actions } from 'react-native-router-flux'
+
+import BackgroundImage from './../components/BackgroundImage'
+import ButtonTreatments from './../components/ButtonTreatments'
 
 export default class Treatment extends React.Component {
   constructor(props) {
@@ -23,30 +26,25 @@ export default class Treatment extends React.Component {
   renderTreatment (treatment) {
     return (  
       <TouchableOpacity  key={treatment.key} onPress={() => Actions.treatementType({treatment: treatment.treatment, title: treatment.name})} style={styles.bottomItem} >
-        <View style={styles.bottomItemInner} > 
-          <Text style={styles.text}>{treatment.name}</Text>
-        </View>
+        <ButtonTreatments name={treatment.name} />
       </TouchableOpacity> 
     ) 
   }
   
   render() {
     return (
-      <ImageBackground source={require('./images/bg.jpg')} imageStyle={{resizeMode: 'cover'}} style={styles.container} >
+     <BackgroundImage>
       <View stles={styles.container}> 
-        <View style={styles.bottom}>
-          { this.state.treatment.map((treat) => this.renderTreatment(treat))  }
+          <View style={styles.bottom}>
+            { this.state.treatment.map((treat) => this.renderTreatment(treat))  }
+          </View>
         </View>
-      </View>
-      </ImageBackground>
+      </BackgroundImage>
     )
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
    bottom: {
      height: '90%',
      flexDirection: 'row',
@@ -57,16 +55,5 @@ const styles = StyleSheet.create({
     width: '50%',
     height: '50%',
     padding: 5,
-   },
-   bottomItemInner: {
-    flex: 1,
-    backgroundColor: '#9E3256',
-    opacity: 1,
-   },
-   text: {
-     textAlign: 'center',
-     color: '#FFF',
-     fontWeight: 'bold',
-     fontSize: 20,
    }
 });

@@ -3,17 +3,17 @@ import { StyleSheet, Text, View, Button, TouchableOpacity, Image } from 'react-n
 import { Scene, Router, Stack } from 'react-native-router-flux'
 import styled from 'styled-components'
 
-import Main from './Main'
-import Home from './Home'
-import About from './About'
-import Treatment from './Treatment'
-import VideoScreen from './VideoScreen'
-import TreatementType from './TreatementType'
-import CirurgicTreatment from './CirurgicTreatment'
-import ListVideo from './ListVideo'
-import Esvaziamento from './Esvaziamento'
-import TreatmentsReconstruction from './TreatmentsReconstruction'
-import BeforeExercises from './BeforeExercises'
+import Main from './src/Main'
+import Home from './src/Home'
+import About from './src/About'
+import Treatment from './src/Treatment'
+import VideoScreen from './src/VideoScreen'
+import TreatementType from './src/TreatementType'
+import CirurgicTreatment from './src/CirurgicTreatment'
+import ListVideo from './src/ListVideo'
+import Esvaziamento from './src/Esvaziamento'
+import TreatmentsReconstruction from './src/TreatmentsReconstruction'
+import BeforeExercises from './src/BeforeExercises'
 
 const Container = styled.View` 
   flex: 1;

@@ -1,26 +1,29 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Actions } from 'react-native-router-flux'
+
+import BackgroundImage from './../components/BackgroundImage'
+import ButtonTreatments from './../components/ButtonTreatments'
 
 export default class TreatmentType extends React.Component {
   renderTreatment (treat) {
     return (  
       <TouchableOpacity  key={treat.key} style={styles.bottomItem}
         onPress={() => Actions.cirurgicTreatment({treatmentType: treat.type, title: treat.name})}  >
-        <View style={styles.bottomItemInner} > 
-          <Text style={styles.text}>{treat.name}</Text>  
-        </View>
+        <ButtonTreatments name={treat.name} />
       </TouchableOpacity>
     ) 
   }
   
   render() {
     return (
-      <View stles={styles.container}>
-        <View style={styles.bottom}>
-          { this.props.treatment.map((treat) => this.renderTreatment(treat)) }
+      <BackgroundImage>
+        <View>
+          <View style={styles.bottom}>
+            { this.props.treatment.map((treat) => this.renderTreatment(treat)) }
+          </View>
         </View>
-      </View>
+      </BackgroundImage>
     )
   }
 }
@@ -31,7 +34,6 @@ const styles = StyleSheet.create({
   },
    bottom: {
      height: '90%',
-     backgroundColor: '#FFF',
      flexDirection: 'row',
      flexWrap: 'wrap',
      padding: 5,
@@ -40,16 +42,5 @@ const styles = StyleSheet.create({
     width: '50%',
     height: '50%',
     padding: 5,
-   },
-   bottomItemInner: {
-    flex: 1,
-    backgroundColor: '#9E3256',
-    opacity: 1,
-   },
-   text: {
-     textAlign: 'center',
-     color: '#FFF',
-     fontWeight: 'bold',
-     fontSize: 20,
    }
 });

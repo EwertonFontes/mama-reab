@@ -2,7 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View, ScrollView, Button, TouchableOpacity, Image } from 'react-native'
 import { Video } from 'expo'
 import VideoPlayer from '@expo/videoplayer'
-import PlaylistVideo from './Playlist'
+import PlaylistVideo from './../components/Playlist'
 import { Actions } from 'react-native-router-flux'
 
 const Thumbnail = { uri: "http://i.imgur.com/HKVgAl0.jpg" }
@@ -18,12 +18,12 @@ export default class ListVideo extends React.Component {
   } 
 
   render() {
-    return (       
-      <ScrollView style={styles.container} >
-        <View>
-          { this.props.exercicios.map((exercicio) => this.renderPlaylist(exercicio)) }
-        </View> 
-      </ScrollView>
+    return (
+        <ScrollView style={styles.container} >
+          <View>
+            { this.props.exercicios.map((exercicio) => this.renderPlaylist(exercicio)) }
+          </View> 
+        </ScrollView>
     )
   }
 }
