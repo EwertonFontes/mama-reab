@@ -1,0 +1,32 @@
+ limitações: [{
+  key: 0, name: 'Abrir o Braço', exercicios: [
+    { key: 0, name: 'Exercicio 1', link: 'https://player.vimeo.com/external/207277102.hd.mp4?s=6939b93ae3554679b57f5e7fa831eef712a74b3c&profile_id=119&oauth2_token_id=57447761' },  
+    { key: 1, name: 'Exercicio 2', link: 'https://player.vimeo.com/external/207277102.hd.mp4?s=6939b93ae3554679b57f5e7fa831eef712a74b3c&profile_id=119&oauth2_token_id=57447761' }, 
+    { key: 2, name: 'Exercicio 3', link: 'https://player.vimeo.com/external/207277102.hd.mp4?s=6939b93ae3554679b57f5e7fa831eef712a74b3c&profile_id=119&oauth2_token_id=57447761' }, 
+    { key: 3, name: 'Exercicio 4', link: 'https://player.vimeo.com/external/207277102.hd.mp4?s=6939b93ae3554679b57f5e7fa831eef712a74b3c&profile_id=119&oauth2_token_id=57447761' }]
+  }, {
+  key: 0, name: 'Erguer o braço acima cabeça', exercicios: [
+    { key: 0, name: 'Exercicio 1', link: 'https://player.vimeo.com/external/207277102.hd.mp4?s=6939b93ae3554679b57f5e7fa831eef712a74b3c&profile_id=119&oauth2_token_id=57447761' },  
+    { key: 1, name: 'Exercicio 2', link: 'https://player.vimeo.com/external/207277102.hd.mp4?s=6939b93ae3554679b57f5e7fa831eef712a74b3c&profile_id=119&oauth2_token_id=57447761' }, 
+    { key: 2, name: 'Exercicio 3', link: 'https://player.vimeo.com/external/207277102.hd.mp4?s=6939b93ae3554679b57f5e7fa831eef712a74b3c&profile_id=119&oauth2_token_id=57447761' }, 
+    { key: 3, name: 'Exercicio 4', link: 'https://player.vimeo.com/external/207277102.hd.mp4?s=6939b93ae3554679b57f5e7fa831eef712a74b3c&profile_id=119&oauth2_token_id=57447761' }]
+  },
+  key: 0, name: Fraqueza', exercicios: [
+    { key: 0, name: 'Exercicio 1', link: 'https://player.vimeo.com/external/207277102.hd.mp4?s=6939b93ae3554679b57f5e7fa831eef712a74b3c&profile_id=119&oauth2_token_id=57447761' },  
+    { key: 1, name: 'Exercicio 2', link: 'https://player.vimeo.com/external/207277102.hd.mp4?s=6939b93ae3554679b57f5e7fa831eef712a74b3c&profile_id=119&oauth2_token_id=57447761' }, 
+    { key: 2, name: 'Exercicio 3', link: 'https://player.vimeo.com/external/207277102.hd.mp4?s=6939b93ae3554679b57f5e7fa831eef712a74b3c&profile_id=119&oauth2_token_id=57447761' }, 
+    { key: 3, name: 'Exercicio 4', link: 'https://player.vimeo.com/external/207277102.hd.mp4?s=6939b93ae3554679b57f5e7fa831eef712a74b3c&profile_id=119&oauth2_token_id=57447761' }]
+  },
+  key: 0, name: 'Formigamento', exercicios: [
+    { key: 0, name: 'Exercicio 1', link: 'https://player.vimeo.com/external/207277102.hd.mp4?s=6939b93ae3554679b57f5e7fa831eef712a74b3c&profile_id=119&oauth2_token_id=57447761' },  
+    { key: 1, name: 'Exercicio 2', link: 'https://player.vimeo.com/external/207277102.hd.mp4?s=6939b93ae3554679b57f5e7fa831eef712a74b3c&profile_id=119&oauth2_token_id=57447761' }, 
+    { key: 2, name: 'Exercicio 3', link: 'https://player.vimeo.com/external/207277102.hd.mp4?s=6939b93ae3554679b57f5e7fa831eef712a74b3c&profile_id=119&oauth2_token_id=57447761' }, 
+    { key: 3, name: 'Exercicio 4', link: 'https://player.vimeo.com/external/207277102.hd.mp4?s=6939b93ae3554679b57f5e7fa831eef712a74b3c&profile_id=119&oauth2_token_id=57447761' }]
+  },
+  key: 0, name: 'Dor por falta de APM', exercicios: [
+    { key: 0, name: 'Exercicio 1', link: 'https://player.vimeo.com/external/207277102.hd.mp4?s=6939b93ae3554679b57f5e7fa831eef712a74b3c&profile_id=119&oauth2_token_id=57447761' },  
+    { key: 1, name: 'Exercicio 2', link: 'https://player.vimeo.com/external/207277102.hd.mp4?s=6939b93ae3554679b57f5e7fa831eef712a74b3c&profile_id=119&oauth2_token_id=57447761' }, 
+    { key: 2, name: 'Exercicio 3', link: 'https://player.vimeo.com/external/207277102.hd.mp4?s=6939b93ae3554679b57f5e7fa831eef712a74b3c&profile_id=119&oauth2_token_id=57447761' }, 
+    { key: 3, name: 'Exercicio 4', link: 'https://player.vimeo.com/external/207277102.hd.mp4?s=6939b93ae3554679b57f5e7fa831eef712a74b3c&profile_id=119&oauth2_token_id=57447761' }]
+  }
+]

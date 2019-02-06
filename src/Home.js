@@ -25,8 +25,8 @@ export default class Home extends React.Component {
     return (
       <BackgroundImage>  
         <ButtonGroup>
-          <TouchableOpacity style={styles.btnSobre} onPress={() => Actions.treatementType({title: 'Cirurgico'})} >
-            <TextBtn>Tratamento</TextBtn>
+          <TouchableOpacity style={styles.btnSobre} onPress={() => Actions.limitations({title: 'Limitações'})} >
+            <TextBtn>Limitações</TextBtn>
           </TouchableOpacity>
           <TouchableOpacity style={styles.btnSobre} onPress={() => Actions.about()} >
             <TextBtn>Sobre</TextBtn>
