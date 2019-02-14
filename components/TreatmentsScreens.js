@@ -7,7 +7,7 @@ import BackgroundImage from './BackgroundImage'
 export const TreatmentsScreens = ({children}) => {
   return (
     <BackgroundImage>
-      <ScrollView  style={styles.container}>
+      <ScrollView  contentContainerStyle={styles.container}>
         <View style={styles.bottom}>
           {children}
         </View>
@@ -18,12 +18,12 @@ export const TreatmentsScreens = ({children}) => {
 
 const styles = StyleSheet.create({
   bottom: {
-    height: '90%',
+    height: '100%',
     flexDirection: 'row',
     flexWrap: 'wrap',
     padding: 5,
   },
-   container: {
+  container: {
     flex: 1,
   },
 })

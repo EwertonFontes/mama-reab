@@ -61,7 +61,7 @@ export default class Limitations extends React.Component {
 const styles = StyleSheet.create({
    bottomItem: {
     width: '50%',
-    height: '50%',
+    height: '33%',
     padding: 5,
    }
 });
