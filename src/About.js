@@ -21,12 +21,12 @@ export default class About extends React.Component {
       <BackgroundImage>   
         <ScrollView style={styles.container}>
           <Text style={styles.textBody}>O tratamento do câncer de mama é primariamente cirúrgico, 
-          e em muitos casos é complementado por tratamentos adjuvantes (radioterapia, quimioterapia e hormonioterapia). 
-          Esse tipo de tratamento é agressivo e além de conseqüências emocionais pode ter conseqüências físicas para a paciente.</Text>
+          e em muitos casos é complementado por tratamento de quimioterapia e radioterapia. 
+          Esse tipo de tratamento é agressivo e além de conseqüências emocionais pode ter conseqüências físicas para a paciente,
+          como dificuldade para mexer o braço falta de força e dor.</Text>
 
-          <Text style={styles.textBody}>A magnitude da cirurgia, a linfadenectomia e a radioterapia justificam as complicações, 
-          que podem comprometer a função do membro superior que sofreu a intervenção e também a qualidade de vida.
-          Por isso esse aplicativo se faz tão necessário.</Text>
+          <Text style={styles.textBody}>Através do Mamareab você pode voltar a ter uma vida mais saudável e sem dores,
+          com exercícios facéis no conforto da sua casa.</Text>
 
           <Container>
             <Footer>Desenvolvido por Ewerton Fontes</Footer>
