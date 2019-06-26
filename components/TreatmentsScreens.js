@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   title: {
-    color: 'white',
+    color: 'black',
     fontSize: 25,
   },
 })

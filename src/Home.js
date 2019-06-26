@@ -6,7 +6,7 @@ import { Actions } from 'react-native-router-flux'
 import BackgroundImage from './../components/BackgroundImage'
 
 const Footer = styled.Text`
-  color: #FFF;
+  color: #000;
   font-size: 15;
   margin-top: 100;
 `
@@ -32,7 +32,7 @@ export default class Home extends React.Component {
             <TextBtn>Sobre</TextBtn>
           </TouchableOpacity>
         </ButtonGroup>
-        <Footer>Desenvolvido por Ewerton Fontes</Footer>
+        <Footer>Desenvolvido por {'<InSite />'}</Footer>
       </BackgroundImage>
     )
   }

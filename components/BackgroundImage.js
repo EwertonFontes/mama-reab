@@ -4,7 +4,7 @@ import { StyleSheet, ImageBackground } from 'react-native'
 class BackgroundImage extends Component {
   render () {
     return (
-      <ImageBackground source={require('./../images/bg.jpg')} imageStyle={{resizeMode: 'cover'}} style={styles.container} >
+      <ImageBackground source={require('./../images/logobg.jpeg')} imageStyle={{resizeMode: 'cover', opacity: 0.3}} style={styles.container} >
         {this.props.children}
       </ImageBackground>
     )

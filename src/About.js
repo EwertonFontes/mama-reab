@@ -29,7 +29,7 @@ export default class About extends React.Component {
           com exercícios facéis no conforto da sua casa.</Text>
 
           <Container>
-            <Footer>Desenvolvido por Ewerton Fontes</Footer>
+            <Footer>Desenvolvido por {'<InSite />'}</Footer>
           </Container>
         </ScrollView>
       </BackgroundImage>
